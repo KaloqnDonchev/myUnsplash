@@ -2,10 +2,6 @@ const imageService = require("../../services/image-service.js");
 
 const uploadFiles = async (req, res) => {
   try {
-    if (req.file == undefined) {
-      return res.send(`You must select a file.`);
-    }
-
     const label = req.body.label;
     const type = req.body.type;
     const size = req.body.size;
